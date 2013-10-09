@@ -1,12 +1,78 @@
 Meteor.startup(function () {
   if (Types.find().count() === 0) {
     var data = [
-      {name: "Buying",
-       args: ["whom", "who", "when", "price"]
+      {
+        name: "INJURE",
+        args: ["Time", "Place", "Agent", "Victim", "Instrument"]
       },
-      {name: "Retiring",
-       args: ["who", "from", "age", "position"]
+      {
+        name: "DIE",
+        args: ["Time", "Place", "Person", "Killer", "Instrument"]
       },
+      {
+        name: "MOVEMENT-TRANSPORT",
+        args: ["Time", "Agent", "Artifact", "Vehicle", "Price", "Origin", "Destination"]
+      },
+      {
+        name: "TRANSFER-OWNERSHIP",
+        args: ["Time", "Place", "Buyer", "Seller", "Beneficiary", "Artifact", "Price"]
+      },
+      {
+        name: "TRANSFER-MONEY",
+        args: ["Time", "Place", "Giver", "Recipient", "Beneficiary", "Money"]
+      },
+      {
+        name: "START-ORG",
+        args: ["Time", "Place", "Agent", "Org"]
+      },
+      {
+        name: "MERGE",
+        args: ["Time", "Place", "Org"]
+      },
+      {
+        name: "DECLARE-BANKRUPTCY",
+        args: ["Time", "Place", "Org"]
+      },
+      {
+        name: "END-ORG",
+        args: ["Time", "Place", "Org"]
+      },
+      {
+        name: "CONTACT-MEET",
+        args: ["Time", "Place", "Entity"]
+      },
+      {
+        name: "START-POSITION",
+        args: ["Time", "Place", "Person", "Entity", "Position"]
+      },
+      {
+        name: "END-POSITION",
+        args: ["Time", "Place", "Person", "Entity", "Position"]
+      },
+      {
+        name: "NOMINATE",
+        args: ["Time", "Place", "Person", "Agent", "Entity", "Position"]
+      },
+      {
+        name: "ELECT",
+        args: ["Time", "Place", "Person", "Entity", "Position"]
+      },
+      {
+        name: "TRIAL-HEARING",
+        args: ["Time", "Place", "Defendant", "Prosecutor", "Adjucator", "Crime"]
+      },
+      {
+        name: "CHARGE-INDICT",
+        args: ["Time", "Place", "Defendant", "Prosecutor", "Adjucator", "Crime"]
+      },
+      {
+        name: "SUE",
+        args: ["Time", "Place", "Defendant", "Prosecutor", "Adjucator", "Crime"]
+      },
+      {
+        name: "FINE",
+        args: ["Time", "Place", "Entity", "Money", "Adjucator", "Crime"]
+      }
     ];
 
     for (var i = 0; i < data.length; i++) {
