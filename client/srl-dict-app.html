@@ -12,7 +12,33 @@
     <option{{selected}} value="{{name}}">{{name}}</option>
   {{/each}}
   </select>
-  {{#each args}}
-    <span>{{name}}</span>
-  {{/each}}
+  {{> args}}
+  <hr />
+  {{> verbs}}
+</template>
+
+<template name="args">
+  <div id="args">
+    {{#each args}}
+      <span>{{name}}</span>
+    {{/each}}
+  </div>
+</template>
+
+
+<template name="verbs">
+  <div id="verbs">
+    <div id="new-verb">
+      <input type="text" id="new-verb" placeholder="New verb" />
+    </div>
+    {{#each verbs}}
+      {{> verb}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="verb">
+  <div>
+    {{inf}}
+  </div>
 </template>
