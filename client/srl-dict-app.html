@@ -7,11 +7,27 @@
 </body>
 
 <template name="types">
-  <select>
-  {{#each types}}
-    <option{{selected}} value="{{name}}">{{name}}</option>
-  {{/each}}
-  </select>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Types</a>
+
+      <ul class="nav">
+        <li class="dropdown">
+          <a data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+            {{type_name}}
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            {{#each types}}
+            <li class={{active}}><a href="#">{{name}}</a></li>
+            {{/each}}
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   {{> args}}
   <hr />
   {{> verbs}}

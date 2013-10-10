@@ -47,13 +47,16 @@ var activateInput = function (input) {
   input.select();
 };
 
+Template.types.type_name = function () {
+  return Session.get("type_name");
+};
 
 Template.types.types = function () {
   return Types.find({}, {sort: {name: 1}});
 };
 
-Template.types.selected = function () {
-  return Session.equals("type_name", this.name) ? ' selected' : ''
+Template.types.active = function () {
+  return Session.equals("type_name", this.name) ? 'active' : ''
 }
 
 Template.args.args = function () {
@@ -64,8 +67,8 @@ Template.args.args = function () {
 }
 
 Template.types.events({
-  'change select': function(evt) {
-    Router.setList(evt.target.value);
+  'click .dropdown-menu li a': function(evt) {
+    Router.setList(evt.target.text);
   }
 })
 
