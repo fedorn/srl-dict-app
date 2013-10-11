@@ -28,15 +28,17 @@
     </div>
   </div>
 
-  {{> args}}
-  <hr />
-  {{> verbs}}
+  <div class="container">
+    {{> args}}
+    {{> verbs}}
+  </div>
 </template>
 
 <template name="args">
-  <div id="args">
+  <div id="args" class="well">
+    Arguments:
     {{#each args}}
-      <span>{{name}}</span>
+      <span class="label">{{name}}</span>
     {{/each}}
   </div>
 </template>
