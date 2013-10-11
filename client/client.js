@@ -87,7 +87,7 @@ Template.verbs.events(okCancelEvents(
 Template.verbs.verbs = function () {
   var type = currentType();
   if (!type)
-    return {};
+    return [];
 
   return Verbs.find({type_id: type._id}, {sort: {inf: 1}});
 };
