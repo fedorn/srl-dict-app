@@ -49,14 +49,52 @@
     <div id="new-verb">
       <input type="text" id="new-verb" placeholder="New verb" />
     </div>
-    {{#each verbs}}
-      {{> verb}}
-    {{/each}}
+    <div class="accordion" id="verbs-accordion">
+      {{#each verbs}}
+        {{> verb}}
+      {{/each}}
+    </div>
   </div>
 </template>
 
 <template name="verb">
-  <div>
-    {{inf}}
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="verbs-accordion" href="#{{inf}}">
+        {{inf}}
+      </a>
+    </div>
+    <div id="{{inf}}" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {{> verbEdit}}
+      </div>
+    </div>
   </div>
+</template>
+
+<template name="verbEdit">
+  <table class="table table-hover">
+    <thead>
+      <tr><th>Type</th><th>Prep</th><th>Case</th></tr>
+    </thead>
+    <tbody>
+      {{#each args}}
+        <tr>
+          <td>{{name}}</td>
+          <td><input type="text"></td>
+          <td>
+            <select>
+              <option></option>
+              <option>nomn</option>
+              <option>gent</option>
+              <option>datv</option>
+              <option>accs</option>
+              <option>ablt</option>
+              <option>loct</option>
+            </select>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </template>

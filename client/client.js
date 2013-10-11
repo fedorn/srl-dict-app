@@ -2,6 +2,13 @@ var currentType = function() {
   return Types.findOne({name: Session.get("type_name")});
 }
 
+var currentTypeArgs = function() {
+  type = currentType();
+  if (type) {
+    return TypeArgs.find({type_id: type._id});
+  }
+}
+
 Meteor.startup(function () {
   Deps.autorun(function () {
     if (! Session.get("type_name") || Types.find({name: Session.get("type_name")}).count() == 0) {
@@ -60,10 +67,7 @@ Template.types.active = function () {
 }
 
 Template.args.args = function () {
-  type = currentType();
-  if (type) {
-    return TypeArgs.find({type_id: type._id});
-  }
+  return currentTypeArgs();
 }
 
 Template.types.events({
@@ -92,7 +96,9 @@ Template.verbs.verbs = function () {
   return Verbs.find({type_id: type._id}, {sort: {inf: 1}});
 };
 
-
+Template.verbEdit.args = function () {
+  return currentTypeArgs();
+}
 
 
 // Track type in URL
