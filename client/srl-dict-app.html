@@ -29,15 +29,15 @@
   </div>
 
   <div class="container">
-    {{> args}}
+    {{> type_args}}
     {{> verbs}}
   </div>
 </template>
 
-<template name="args">
-  <div id="args" class="well">
+<template name="type_args">
+  <div id="type_args" class="well">
     Arguments:
-    {{#each args}}
+    {{#each type_args}}
       <span class="label">{{name}}</span>
     {{/each}}
   </div>
@@ -66,35 +66,36 @@
     </div>
     <div id="{{inf}}" class="accordion-body collapse">
       <div class="accordion-inner">
-        {{> verbEdit}}
+        {{> verb_edit}}
       </div>
     </div>
   </div>
 </template>
 
-<template name="verbEdit">
+<template name="verb_edit">
   <table class="table table-hover">
     <thead>
       <tr><th>Type</th><th>Prep</th><th>Case</th></tr>
     </thead>
     <tbody>
       {{#each args}}
-        <tr>
-          <td>{{name}}</td>
-          <td><input type="text"></td>
-          <td>
-            <select>
-              <option></option>
-              <option>nomn</option>
-              <option>gent</option>
-              <option>datv</option>
-              <option>accs</option>
-              <option>ablt</option>
-              <option>loct</option>
-            </select>
-          </td>
-        </tr>
+        {{> arg}}
       {{/each}}
     </tbody>
   </table>
+</template>
+
+<template name="arg">
+  <tr>
+    <td>{{name}}</td>
+    <td><input type="text" name="prep" value="{{prep}}" class="prep-input" /></td>
+    <td>
+      <select class="noun-case-select">
+        <option></option>
+        {{#each noun_cases}}
+          <option{{selected_case ../noun_case}}>{{this}}</option>
+        {{/each}}
+      </select>
+    </td>
+  </tr>
 </template>
