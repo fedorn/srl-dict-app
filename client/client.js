@@ -1,3 +1,6 @@
+// When editing verb text, ID of the verb
+Session.setDefault('editing_verb', null);
+
 var currentType = function() {
   return Types.findOne({name: Session.get("type_name")});
 }
@@ -88,8 +91,7 @@ Template.verbs.events(okCancelEvents(
       });
       evt.target.value = '';
     }
-  },
-  false
+  }
 ));
 
 Template.verbs.verbs = function () {
@@ -99,6 +101,36 @@ Template.verbs.verbs = function () {
 
   return Verbs.find({type_id: type._id}, {sort: {inf: 1}});
 };
+
+Template.verb.editing = function () {
+  return Session.equals('editing_verb', this._id);
+};
+
+Template.verb.events({
+  'click .display .inf-edit': function (evt, tmpl) {
+    Session.set('editing_verb', this._id);
+    Deps.flush(); // update DOM before focus
+    activateInput(tmpl.find("#verb-input"));
+  },
+  'click .destroy': function () {
+    Args.find({verb_id: this._id}).forEach(function(arg) {
+      Args.remove({_id: arg._id});
+    });
+    Verbs.remove(this._id);
+  },
+});
+
+Template.verb.events(okCancelEvents(
+  '#verb-input',
+  {
+    ok: function (value) {
+      Verbs.update(this._id, {$set: {inf: value}});
+      Session.set('editing_verb', null);
+    },
+    cancel: function () {
+      Session.set('editing_verb', null);
+    }
+  }));
 
 Template.verb_edit.args = function () {
   var verb_id = this._id;

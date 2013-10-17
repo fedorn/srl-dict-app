@@ -58,18 +58,28 @@
 </template>
 
 <template name="verb">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="verbs-accordion" href="#{{inf}}">
-        {{inf}}
-      </a>
+  {{#if editing}}
+    <div class="edit">
+      <input id="verb-input" type="text" value="{{inf}}" />
     </div>
-    <div id="{{inf}}" class="accordion-body collapse">
-      <div class="accordion-inner">
-        {{> verb_edit}}
+  {{else}}
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <div class="accordion-toggle display">
+          <a class="verb-text" data-toggle="collapse" data-parent="verbs-accordion" href="#{{inf}}">
+            {{inf}}
+          </a>
+          <i class="inf-edit icon-pencil"></i>
+          <i class="destroy icon-trash"></i>
+        </div>
+      </div>
+      <div id="{{inf}}" class="accordion-body collapse">
+        <div class="accordion-inner">
+          {{> verb_edit}}
+        </div>
       </div>
     </div>
-  </div>
+  {{/if}}
 </template>
 
 <template name="verb_edit">
