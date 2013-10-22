@@ -132,24 +132,17 @@ Template.verb.events(okCancelEvents(
     }
   }));
 
-Template.verb_edit.args = function () {
-  var verb_id = this._id;
-  return _.map(currentTypeArgs().fetch(), function(type_arg) {
-    var selector = {type_id: type_arg._id, verb_id: verb_id};
-    var arg = Args.findOne(selector);
-    return {
-      name: type_arg.name,
-      prep: arg ? arg.prep : '',
-      noun_case: arg ? arg.noun_case : '',
-      selector: selector,
-      arg: function() {
-        return arg = Args.findOne(selector);
-      }
-    };
-  });
+Template.verb_edit.args = function() {
+  return Args.find({verb_id: this._id});
 }
 
-Template.arg.noun_cases = function () {
+Template.verb_edit.events({
+  'click .addarg': function() {
+    Args.insert({verb_id: this._id, type_arg_id: TypeArgs.findOne({type_id: currentType()._id})._id, noun_case: NounCases[0]});
+  }
+});
+
+Template.arg.noun_cases = function() {
   return NounCases;
 }
 
@@ -157,19 +150,22 @@ Template.arg.selected_case = function(value) {
   return (value == this ? ' selected' : '');
 }
 
+Template.arg.type_args = function() {
+  return currentTypeArgs();
+}
+
+Template.arg.selected_type_arg = function(value) {
+  return (value == this._id ? ' selected' : '');
+}
+
 Template.arg.events(okCancelEvents(
   '.prep-input',
   {
     ok: function(value) {
-      var arg = this.arg();
       if (value) {
-        if (arg) {
-          Args.update({_id: arg._id}, {$set: {prep: value}});
-        } else {
-          Args.insert(_.extend(this.selector, {prep: value}));
-        }
-      } else if (arg) {
-        Args.update({_id: arg._id}, {$unset: {prep: value}})
+        Args.update({_id: this._id}, {$set: {prep: value}});
+      } else {
+        Args.update({_id: this._id}, {$unset: {prep: value}})
       }
     }
   },
@@ -179,19 +175,15 @@ Template.arg.events(okCancelEvents(
 Template.arg.events({
   'change .noun-case-select': function(evt) {
     var value = evt.target.value;
-    var arg = this.arg();
-    if (value) {
-      if (arg) {
-        console.log("if value if arg");
-        Args.update({_id: arg._id}, {$set: {noun_case: value}});
-      } else {
-        console.log("if value else");
-        Args.insert(_.extend(this.selector, {noun_case: value}));
-      }
-    } else if (arg) {
-      console.log("else if arg");
-      Args.update({_id: arg._id}, {$unset: {noun_case: value}})
-    }
+    Args.update({_id: this._id}, {$set: {noun_case: value}});
+  },
+  'change .type-arg-select': function(evt) {
+    var value = evt.target.value;
+    console.log(value);
+    Args.update({_id: this._id}, {$set: {type_arg_id: value}});
+  },
+  'click .remove': function() {
+    Args.remove(this._id);
   }
 });
 

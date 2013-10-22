@@ -85,7 +85,7 @@
 <template name="verb_edit">
   <table class="table table-hover">
     <thead>
-      <tr><th>Type</th><th>Prep</th><th>Case</th></tr>
+      <tr><th></th><th>Prep</th><th>Case</th><th>TypeArg</th></tr>
     </thead>
     <tbody>
       {{#each args}}
@@ -93,17 +93,24 @@
       {{/each}}
     </tbody>
   </table>
+  <button class="btn addarg"><i class="icon-plus"></i> New Arg</button>
 </template>
 
 <template name="arg">
   <tr>
-    <td>{{name}}</td>
+    <td><i class="remove icon-remove-circle"></i></td>
     <td><input type="text" name="prep" value="{{prep}}" class="prep-input" /></td>
     <td>
       <select class="noun-case-select">
-        <option></option>
         {{#each noun_cases}}
           <option{{selected_case ../noun_case}}>{{this}}</option>
+        {{/each}}
+      </select>
+    </td>
+    <td>
+      <select class="type-arg-select">
+        {{#each type_args}}
+          <option value="{{_id}}"{{selected_type_arg ../type_arg_id}}>{{name}}</option>
         {{/each}}
       </select>
     </td>
