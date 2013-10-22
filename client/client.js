@@ -138,7 +138,7 @@ Template.verb_edit.args = function() {
 
 Template.verb_edit.events({
   'click .addarg': function() {
-    Args.insert({verb_id: this._id, type_arg_id: TypeArgs.findOne({type_id: currentType()._id})._id, noun_case: NounCases[0]});
+    Args.insert({verb_id: this._id, noun_case: NounCases[0]});
   }
 });
 
@@ -179,8 +179,11 @@ Template.arg.events({
   },
   'change .type-arg-select': function(evt) {
     var value = evt.target.value;
-    console.log(value);
-    Args.update({_id: this._id}, {$set: {type_arg_id: value}});
+    if (value) {
+      Args.update({_id: this._id}, {$set: {type_arg_id: value}});
+    } else {
+      Args.update({_id: this._id}, {$unset: {type_arg_id: value}});
+    }
   },
   'click .remove': function() {
     Args.remove(this._id);
