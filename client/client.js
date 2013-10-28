@@ -138,7 +138,7 @@ Template.verb_edit.args = function() {
 
 Template.verb_edit.events({
   'click .addarg': function() {
-    Args.insert({verb_id: this._id, noun_case: NounCases[0]});
+    Args.insert({verb_id: this._id, noun_case: NounCases[0][0]});
   }
 });
 
@@ -147,7 +147,7 @@ Template.arg.noun_cases = function() {
 }
 
 Template.arg.selected_case = function(value) {
-  return (value == this ? ' selected' : '');
+  return (value == this[0] ? ' selected' : '');
 }
 
 Template.arg.type_args = function() {

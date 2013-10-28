@@ -103,7 +103,7 @@
     <td>
       <select class="noun-case-select">
         {{#each noun_cases}}
-          <option{{selected_case ../noun_case}}>{{this}}</option>
+          <option value="{{this.[0]}}"{{selected_case ../noun_case}}>{{this.[1]}}</option>
         {{/each}}
       </select>
     </td>
