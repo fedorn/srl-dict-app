@@ -172,6 +172,20 @@ Template.arg.events(okCancelEvents(
   true
 ));
 
+Template.arg.events(okCancelEvents(
+  '.example-input',
+  {
+    ok: function(value) {
+      if (value) {
+        Args.update({_id: this._id}, {$set: {example: value}});
+      } else {
+        Args.update({_id: this._id}, {$unset: {example: value}})
+      }
+    }
+  },
+  true
+));
+
 Template.arg.events({
   'change .noun-case-select': function(evt) {
     var value = evt.target.value;
