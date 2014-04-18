@@ -155,7 +155,7 @@ Template.arg.type_args = function() {
 }
 
 Template.arg.selected_type_arg = function(value) {
-  return (value == this._id ? ' selected' : '');
+  return (this._id.equals(value) ? ' selected' : '');
 }
 
 Template.arg.events(okCancelEvents(
