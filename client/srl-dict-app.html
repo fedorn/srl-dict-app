@@ -1,5 +1,6 @@
 <head>
   <title>srl-dict-app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -47,7 +48,7 @@
 <template name="verbs">
   <div id="verbs">
     <div id="new-verb">
-      <input type="text" id="new-verb" placeholder="New verb" />
+      <input type="text" id="new-verb" placeholder="Новый глагол" />
     </div>
     <div class="accordion" id="verbs-accordion">
       {{#each verbs}}
@@ -74,7 +75,7 @@
         </div>
       </div>
       <div id="{{inf}}" class="accordion-body collapse">
-        <div class="accordion-inner">
+        <div class="accordion-inner verb-edit">
           {{> verb_edit}}
         </div>
       </div>
@@ -99,22 +100,22 @@
 <template name="arg">
   <tr>
     <td><i class="remove icon-remove-circle"></i></td>
-    <td><input type="text" name="prep" value="{{prep}}" class="prep-input" /></td>
+    <td><input type="text" name="prep" value="{{prep}}" class="prep-input input-mini" /></td>
     <td>
-      <select class="noun-case-select">
+      <select class="noun-case-select input-medium">
         {{#each noun_cases}}
           <option value="{{this.[0]}}"{{selected_case ../noun_case}}>{{this.[1]}}</option>
         {{/each}}
       </select>
     </td>
     <td>
-      <select class="type-arg-select">
+      <select class="type-arg-select input-medium">
         <option value=""></option>
         {{#each type_args}}
           <option value="{{_id}}"{{selected_type_arg ../type_arg_id}}>{{name}}</option>
         {{/each}}
       </select>
     </td>
-    <td><input type="text" name="example" value="{{example}}" class="example-input" /></td>
+    <td><input type="text" name="example" value="{{example}}" class="example-input input-medium" /></td>
   </tr>
 </template>

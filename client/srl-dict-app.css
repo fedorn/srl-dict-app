@@ -2,3 +2,7 @@
 .remove {
   cursor: pointer;
 }
+
+.verb-edit {
+  overflow-x: auto;
+}
