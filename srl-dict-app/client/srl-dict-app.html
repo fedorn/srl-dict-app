@@ -112,7 +112,7 @@
       <select class="type-arg-select input-medium">
         <option value=""></option>
         {{#each type_args}}
-          <option value="{{_id}}" selected={{selected_type_arg ../type_arg_id}}>{{name}}</option>
+          <option value="{{_id.toHexString}}" selected={{selected_type_arg ../type_arg_id}}>{{name}}</option>
         {{/each}}
       </select>
     </td>

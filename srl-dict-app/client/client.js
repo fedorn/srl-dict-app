@@ -194,6 +194,7 @@ Template.arg.events({
   'change .type-arg-select': function(evt) {
     var value = evt.target.value;
     if (value) {
+      value = new Meteor.Collection.ObjectID(value);
       Args.update({_id: this._id}, {$set: {type_arg_id: value}});
     } else {
       Args.update({_id: this._id}, {$unset: {type_arg_id: value}});
