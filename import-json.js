@@ -6,10 +6,7 @@
 
 var program = require('commander')
   , fs = require('fs')
-  , MongoClient = require('mongodb').MongoClient
-  , format = require('util').format;
-
-var ObjectID = require('mongodb').ObjectID;
+  , mongoose = require('mongoose')
 
 program
   .version('0.0.1')
@@ -18,43 +15,96 @@ program
   .option('-j, --jsonfile [file]', 'File to import json from')
 
 program.on('--help', function(){
-  console.log('You can get url with `meteor mongo --url [site domain]`');
+  console.log('You can get url with `meteor mongo --url [site domain]`.');
+  console.log('When process of saving stops, you can exit with Ctrl-C.');
 });
 
 program.parse(process.argv);
 
-if (program.drop) {
-  console.log("Dropping tables...")
-  // TODO: drop tables
-}
 
-if (program.jsonfile) {
-  console.log("Importing data...")
-  fs.readFile(program.jsonfile, 'utf8', function (err, data) {
-    if (err) {
-      console.log('Error: ' + err);
-      return;
-    }
+var mongoose = require('mongoose');
+mongoose.connect(program.mongourl);
+var model = require('./import-model.js');
+var Type = model.Type;
+var TypeArg = model.TypeArg;
+var Verb = model.Verb;
+var Arg = model.Arg;
 
-    data = JSON.parse(data);
+var importing = function () {
+  if (program.jsonfile) {
+    console.log("Importing data... Press Ctrl-C to exit when process stops.")
+    fs.readFile(program.jsonfile, 'utf8', function (err, data) {
+      if (err) {
+        console.log('Error: ' + err);
+        return;
+      }
 
-    importJson(data);
-  });
+      data = JSON.parse(data);
+
+      importJson(data);
+    });
+  }
 }
 
 var importJson = function (data) {
-  MongoClient.connect(program.mongourl, function(err, db) {
-    Types = db.collection("types")
-    TypeArgs = db.collection("typeArgs")
-    Verbs = db.collection("verbs")
-    Args = db.collection("args")
-
-    for (typeName in data) {
-      console.log(typeName);
-      Types.findOne({name: typeName}, function (err, type) {
-        console.log(type._id);
-      });
-    }
-    db.close();
-  });
+  for (typeName in data) {
+    Type.findOne({name: typeName}, function (err, type) {
+      for (verbInf in data[type.name]) {
+        //console.log({inf: verbInf, type_id: type.id});
+        Verb.findOne({inf: verbInf, type_id: type.id}, (function(verbInf) { return function (err, verb) {
+          if (!verb) {
+            verb = new Verb({inf: verbInf, type_id: type.id});
+            verb.save()
+          }
+          for (i = 0; i < data[type.name][verb.inf].length; ++i) {
+            argData = data[type.name][verb.inf][i];
+            if (argData.type_arg != undefined) {
+              TypeArg.findOne({type_id: type.id, name: argData.type_arg}, (function(argData) { return function(err, typeArg) {
+                arg = argFromData(verb, argData);
+                arg.type_arg_id = typeArg.id;
+                arg.save(function (err, arg) {
+                  if (err) return console.error(err);
+                  console.log('Saved: ' + arg);
+                });
+              } })(argData));
+            } else {
+              arg = argFromData(verb, argData);
+              arg.save(function (err, arg) {
+                if (err) return console.error(err);
+                console.log('Saved: ' + arg);
+              });
+            }
+          }
+        } })(verbInf));
+      }
+    });
+  }
 };
+
+var argFromData = function (verb, argData) {
+  arg = new Arg();
+  arg.verb_id = verb.id;
+  if (argData.prep != undefined) {
+    arg.prep = argData.prep;
+  }
+  if (argData.noun_case != undefined) {
+    arg.noun_case = argData.noun_case;
+  }
+  if (argData.example != undefined) {
+    arg.example = argData.example;
+  }
+  return arg;
+};
+
+if (program.drop) {
+  console.log("Dropping tables...")
+  Arg.remove({}, function(err) {
+    console.log('Args removed');
+    Verb.remove({}, function(err) {
+      console.log('Verbs removed');
+      importing();
+    });
+  });
+} else {
+  importing();
+}
