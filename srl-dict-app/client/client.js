@@ -147,7 +147,7 @@ Template.arg.noun_cases = function() {
 }
 
 Template.arg.selected_case = function(value) {
-  return (value == this[0] ? ' selected' : '');
+  return value == this[0];
 }
 
 Template.arg.type_args = function() {
@@ -155,7 +155,7 @@ Template.arg.type_args = function() {
 }
 
 Template.arg.selected_type_arg = function(value) {
-  return (this._id.equals(value) ? ' selected' : '');
+  return this._id.equals(value);
 }
 
 Template.arg.events(okCancelEvents(

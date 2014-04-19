@@ -104,7 +104,7 @@
     <td>
       <select class="noun-case-select input-medium">
         {{#each noun_cases}}
-          <option value="{{this.[0]}}"{{selected_case ../noun_case}}>{{this.[1]}}</option>
+          <option value="{{this.[0]}}" selected={{selected_case ../noun_case}}>{{this.[1]}}</option>
         {{/each}}
       </select>
     </td>
@@ -112,7 +112,7 @@
       <select class="type-arg-select input-medium">
         <option value=""></option>
         {{#each type_args}}
-          <option value="{{_id}}"{{selected_type_arg ../type_arg_id}}>{{name}}</option>
+          <option value="{{_id}}" selected={{selected_type_arg ../type_arg_id}}>{{name}}</option>
         {{/each}}
       </select>
     </td>
