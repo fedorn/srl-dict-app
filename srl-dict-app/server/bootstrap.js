@@ -10,7 +10,7 @@ Meteor.startup(function () {
         args: ["Time", "Place", "Person", "Killer", "Instrument"]
       },
       {
-        name: "MOVEMENT-TRANSPORT",
+        name: "TRANSPORT",
         args: ["Time", "Agent", "Artifact", "Vehicle", "Price", "Origin", "Destination"]
       },
       {
@@ -26,7 +26,7 @@ Meteor.startup(function () {
         args: ["Time", "Place", "Agent", "Org"]
       },
       {
-        name: "MERGE",
+        name: "MERGE-ORG",
         args: ["Time", "Place", "Org"]
       },
       {
@@ -38,7 +38,7 @@ Meteor.startup(function () {
         args: ["Time", "Place", "Org"]
       },
       {
-        name: "CONTACT-MEET",
+        name: "CONTACT",
         args: ["Time", "Place", "Entity"]
       },
       {
