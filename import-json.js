@@ -10,7 +10,7 @@ var program = require('commander')
 
 program
   .version('0.0.1')
-  .option('-u, --mongourl <url>', 'URL to connecto to mongo')
+  .option('-u, --mongourl <url>', 'URL to connect to mongo')
   .option('-d, --drop', 'Drop db before import')
   .option('-j, --jsonfile [file]', 'File to import json from')
 
@@ -24,7 +24,7 @@ program.parse(process.argv);
 
 var mongoose = require('mongoose');
 mongoose.connect(program.mongourl);
-var model = require('./import-model.js');
+var model = require('./mongoose-model.js');
 var Type = model.Type;
 var TypeArg = model.TypeArg;
 var Verb = model.Verb;
@@ -39,7 +39,7 @@ var importing = function () {
         return;
       }
 
-      data = JSON.parse(data);
+      var data = JSON.parse(data);
 
       importJson(data);
     });
@@ -53,14 +53,14 @@ var importJson = function (data) {
         //console.log({inf: verbInf, type_id: type.id});
         Verb.findOne({inf: verbInf, type_id: type.id}, (function(verbInf) { return function (err, verb) {
           if (!verb) {
-            verb = new Verb({inf: verbInf, type_id: type.id});
+            var verb = new Verb({inf: verbInf, type_id: type.id});
             verb.save()
           }
           for (i = 0; i < data[type.name][verb.inf].length; ++i) {
-            argData = data[type.name][verb.inf][i];
+            var argData = data[type.name][verb.inf][i];
             if (argData.type_arg != undefined) {
               TypeArg.findOne({type_id: type.id, name: argData.type_arg}, (function(argData) { return function(err, typeArg) {
-                arg = argFromData(verb, argData);
+                var arg = argFromData(verb, argData);
                 arg.type_arg_id = typeArg.id;
                 arg.save(function (err, arg) {
                   if (err) return console.error(err);
@@ -68,7 +68,7 @@ var importJson = function (data) {
                 });
               } })(argData));
             } else {
-              arg = argFromData(verb, argData);
+              var arg = argFromData(verb, argData);
               arg.save(function (err, arg) {
                 if (err) return console.error(err);
                 console.log('Saved: ' + arg);
@@ -82,7 +82,7 @@ var importJson = function (data) {
 };
 
 var argFromData = function (verb, argData) {
-  arg = new Arg();
+  var arg = new Arg();
   arg.verb_id = verb.id;
   if (argData.prep != undefined) {
     arg.prep = argData.prep;
