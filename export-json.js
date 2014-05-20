@@ -44,8 +44,18 @@ var dataFromArg = function(arg) {
   return dataArg;
 };
 
+var writeFile = function() {
+  console.log('Writing file...');
+  fs.writeFile(program.jsonfile, JSON.stringify(data, null, 4), function (err) {
+    if (err) throw err;
+    console.log('It\'s saved!');
+    process.exit();
+  });
+}
+
 Arg.find({}, function(err, args) {
   //console.log(args);
+  var unprocessed = args.length;
   for (var i = 0; i < args.length; ++i) {
     (function(arg) {
       Verb.findOne({_id: arg.verb_id}, function(err, verb) {
@@ -62,24 +72,19 @@ Arg.find({}, function(err, args) {
               dataArg["type_arg"] = typeArg.name;
               data[type.name][verb.inf].push(dataArg);
               console.log('Saved: ' + arg);
+              unprocessed--;
+              if (unprocessed == 0) {
+                writeFile();
+              }
             });
           } else {
-            //data[type.name][verb.inf].push(dataFromArg(arg));
-            //console.log('Saved: ' + arg);
+            unprocessed--;
+            if (unprocessed == 0) {
+              writeFile();
+            }
           }
         });
       });
     })(args[i]);
   }
-});
-
-process.stdin.resume();
-
-process.on('SIGINT', function() {
-  console.log('Writing file...');
-  fs.writeFile(program.jsonfile, JSON.stringify(data, null, 4), function (err) {
-    if (err) throw err;
-    console.log('It\'s saved!');
-    process.exit();
-  });
 });
