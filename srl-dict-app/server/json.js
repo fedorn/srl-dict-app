@@ -30,6 +30,15 @@ Meteor.startup(function () {
         data[type.name][verb.inf].push(dataArg);
       });
       return EJSON.stringify(data);
+    }, 'event-types.json': function() {
+      var typeSystem = {};
+      Types.find().forEach(function(type) {
+        typeSystem[type.name] = [];
+        TypeArgs.find({type_id: type._id}).forEach(function(typeArg) {
+          typeSystem[type.name].push(typeArg.name);
+        });
+      });
+      return EJSON.stringify(typeSystem);
     }
   });
 });
