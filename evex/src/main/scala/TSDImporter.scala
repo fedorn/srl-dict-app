@@ -1,17 +1,19 @@
 package issst.evex.kb
 
 import play.api.libs.json._
-import dispatch._, Defaults._
-import org.apache.uima.resource.metadata.{TypeSystemDescription, TypeDescription}
-import org.uimafit.factory.TypeSystemDescriptionFactory
-import ru.kfu.cll.uima.tokenizer.InitialTokenizer
-import java.io.StringWriter
+import dispatch._
+import Defaults._
+import org.apache.uima.resource.metadata.TypeSystemDescription
+import org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl
+import java.nio.file.{Paths, Files}
+import java.nio.charset.StandardCharsets
 
 object TSDImporter {
   val indicatorBaseType = "issst.evex.indicator.Base"
   val argumentBaseType = "issst.evex.argument.Base"
+  val tsdPath = Paths.get("src/main/resources/EvexTypeSystem.xml")
 
-  def makeImport(): String = {
+  def main(args: Array[String]) {
     val types = getTypes("http://srl.meteor.com/event-types.json")
 
     val tsd = bootstrapTSD()
@@ -24,9 +26,9 @@ object TSDImporter {
       addArgumentType(tsd, argumentName)
     }
 
-    val stringWriter = new StringWriter()
-    tsd.toXML(stringWriter)
-    stringWriter.toString
+    val fileWriter = Files.newBufferedWriter(tsdPath, StandardCharsets.UTF_8)
+    tsd.toXML(fileWriter)
+    fileWriter.close()
   }
 
   private def getTypes(urlString: String) = {
@@ -37,7 +39,7 @@ object TSDImporter {
   }
 
   private def bootstrapTSD() = {
-    val tsd = TypeSystemDescriptionFactory.createTypeSystemDescription()
+    val tsd = new TypeSystemDescription_impl()
 
     tsd.addType(indicatorBaseType, "Base type for event indicators", "uima.tcas.Annotation")
     tsd.addType(argumentBaseType, "Base type for event arguments", "uima.tcas.Annotation")
@@ -57,10 +59,14 @@ object TSDImporter {
   }
 
   private def eventType(eventName: String) = {
-    "issst.evex.indicator." + eventName.toLowerCase.capitalize
+    "issst.evex.indicator." + camelCaseize(eventName.toLowerCase.capitalize)
   }
 
   private def argumentType(argumentName: String) = {
     "issst.evex.argument." + argumentName.toLowerCase.capitalize
+  }
+
+  private def camelCaseize(s: String) = {
+    """-([a-z])""".r replaceAllIn(s,  m => m.group(1).toUpperCase)
   }
 }

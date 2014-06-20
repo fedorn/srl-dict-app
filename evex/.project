@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>evex</name>
+  <name>evex.kb</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>

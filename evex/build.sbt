@@ -1,3 +1,9 @@
+name := "evex.kb"
+
+version := "1.0"
+
+scalaVersion := "2.11.0"
+
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
 resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
