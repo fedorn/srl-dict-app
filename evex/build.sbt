@@ -14,6 +14,10 @@ libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.1"
 
 libraryDependencies += "org.clapper" %% "grizzled-slf4j" % "1.0.2"
 
-libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-tokenizer" % "0.3-SNAPSHOT"
+libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-dep-parser-mst" % "0.3-SNAPSHOT"
 
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.7"
+libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-dep-parser-mst" % "0.3-SNAPSHOT" classifier "tests"
+
+libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-lemmatizer-opencorpora" % "0.3-SNAPSHOT"
+
+libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-commons" % "0.3-SNAPSHOT"

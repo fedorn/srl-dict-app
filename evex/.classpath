@@ -21,7 +21,12 @@
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/io.netty/netty/bundles/netty-3.9.0.Final.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.clapper/grizzled-slf4j_2.11/jars/grizzled-slf4j_2.11-1.0.2.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.7.jar"/>
-  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-tokenizer/0.3-SNAPSHOT/uima-tokenizer-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-dep-parser-mst/0.3-SNAPSHOT/uima-ext-dep-parser-mst-0.3-SNAPSHOT-tests.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-dep-parser-mst/0.3-SNAPSHOT/uima-ext-dep-parser-mst-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/net.sourceforge.mstparser/mstparser/jars/mstparser-0.5.1.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/trove/trove/1.1-beta-5a/trove-1.1-beta-5a.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-dep-parser/0.3-SNAPSHOT/uima-ext-dep-parser-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-morph-opencorpora/0.3-SNAPSHOT/uima-morph-opencorpora-0.3-SNAPSHOT.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-commons/0.3-SNAPSHOT/uima-ext-commons-0.3-SNAPSHOT.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.apache.uima/uimaj-core/jars/uimaj-core-2.4.2.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.apache.uima/uimaj-cpe/jars/uimaj-cpe-2.4.2.jar"/>
@@ -42,7 +47,19 @@
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.2.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar"/>
   <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/com.google.guava/guava/bundles/guava-14.0.1.jar"/>
-  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.7.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.cleartk/cleartk-ml/jars/cleartk-ml-1.3.0.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.cleartk/cleartk-util/jars/cleartk-util-0.9.2.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/args4j/args4j/jars/args4j-2.0.16.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/com.carrotsearch/hppc/jars/hppc-0.4.1.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/kfu/itis/issst/crfsuite4j/crfsuite4j/0.1/crfsuite4j-0.1.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/com.beust/jcommander/jars/jcommander-1.32.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-eval/0.3-SNAPSHOT/uima-ext-eval-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.0.9.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.0.9.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-tokenizer/0.3-SNAPSHOT/uima-tokenizer-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.m2/repository/ru/ksu/niimm/cll/uima/uima-ext-lemmatizer-opencorpora/0.3-SNAPSHOT/uima-ext-lemmatizer-opencorpora-0.3-SNAPSHOT.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.scalatest/scalatest_2.11/jars/scalatest_2.11-2.1.5.jar"/>
+  <classpathentry kind="lib" path="/home/fsqcds/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="output" path="bin"/>
 </classpath>

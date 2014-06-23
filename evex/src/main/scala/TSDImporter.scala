@@ -9,8 +9,8 @@ import java.nio.file.{Paths, Files}
 import java.nio.charset.StandardCharsets
 
 object TSDImporter {
-  val indicatorBaseType = "issst.evex.indicator.Base"
-  val argumentBaseType = "issst.evex.argument.Base"
+  val indicatorBaseType = "issst.evex.event.EventBase"
+  val argumentBaseType = "issst.evex.argument.ArgumentBase"
   val tsdPath = Paths.get("src/main/resources/EvexTypeSystem.xml")
 
   def main(args: Array[String]) {
@@ -55,11 +55,11 @@ object TSDImporter {
   }
 
   private def addArgumentType(tsd: TypeSystemDescription, argumentName: String) {
-    tsd.addType("issst.evex.argument." + argumentType(argumentName), argumentName + " event argument", argumentBaseType)
+    tsd.addType(argumentType(argumentName), argumentName + " event argument", argumentBaseType)
   }
 
   private def eventType(eventName: String) = {
-    "issst.evex.indicator." + camelCaseize(eventName.toLowerCase.capitalize)
+    "issst.evex.event." + camelCaseize(eventName.toLowerCase.capitalize)
   }
 
   private def argumentType(argumentName: String) = {
