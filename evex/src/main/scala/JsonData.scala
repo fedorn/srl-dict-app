@@ -7,12 +7,12 @@ import org.apache.uima.resource.SharedResourceObject
 import org.apache.uima.resource.DataResource
 
 class JsonData extends SharedResourceObject {
-  var json: JsValue = null
+  var json: Map[String, Map[String, Set[Map[String, String]]]] = null
 
   def load(aData: DataResource) {
     val uri = aData.getUri().toString()
     val dataUrl = url(uri)
     val jsonString = Http(dataUrl OK as.String)
-    json = Json.parse(jsonString())
+    json = Json.parse(jsonString()).as[Map[String, Map[String, Set[Map[String, String]]]]]
   }
 }

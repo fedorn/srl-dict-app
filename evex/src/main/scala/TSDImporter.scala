@@ -58,11 +58,11 @@ object TSDImporter {
     tsd.addType(argumentType(argumentName), argumentName + " event argument", argumentBaseType)
   }
 
-  private def eventType(eventName: String) = {
+  def eventType(eventName: String) = {
     "issst.evex.event." + camelCaseize(eventName.toLowerCase.capitalize)
   }
 
-  private def argumentType(argumentName: String) = {
+  def argumentType(argumentName: String) = {
     "issst.evex.argument." + argumentName.toLowerCase.capitalize
   }
 
