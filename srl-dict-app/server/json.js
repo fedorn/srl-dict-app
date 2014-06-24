@@ -18,7 +18,7 @@ Meteor.startup(function () {
         return dataArg;
       };
 
-      this.setContentType('application/json');
+      this.setContentType('application/json; charset=utf-8');
       var data = {};
 
       Args.find().forEach(function(arg) {
@@ -38,6 +38,7 @@ Meteor.startup(function () {
           typeSystem[type.name].push(typeArg.name);
         });
       });
+      this.setContentType('application/json; charset=utf-8');
       return EJSON.stringify(typeSystem);
     }
   });
