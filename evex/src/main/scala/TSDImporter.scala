@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets
 object TSDImporter {
   val indicatorBaseType = "issst.evex.event.EventBase"
   val argumentBaseType = "issst.evex.argument.ArgumentBase"
+  val prepFeature = "prep"
   val tsdPath = Paths.get("src/main/resources/EvexTypeSystem.xml")
 
   def main(args: Array[String]) {
@@ -43,7 +44,7 @@ object TSDImporter {
 
     tsd.addType(indicatorBaseType, "Base type for event indicators", "uima.tcas.Annotation")
     val argTypeDesc = tsd.addType(argumentBaseType, "Base type for event arguments", "uima.tcas.Annotation")
-    argTypeDesc.addFeature("prep", "Preposition of argument", "org.opencorpora.cas.Word")
+    argTypeDesc.addFeature(prepFeature, "Preposition of argument", "org.opencorpora.cas.Word")
 
     tsd
   }
@@ -51,7 +52,7 @@ object TSDImporter {
   private def addEventType(tsd: TypeSystemDescription, eventName: String, argumentNames: List[String]) = {
     val eventTypeDesc = tsd.addType(eventType(eventName), eventName + " event indicator", indicatorBaseType)
     for (argumentName <- argumentNames) {
-      eventTypeDesc.addFeature(argumentName.toLowerCase, argumentName + " of event", argumentType(argumentName))
+      eventTypeDesc.addFeature(argumentFeature(argumentName), argumentName + " of event", argumentType(argumentName))
     }
   }
 
@@ -69,5 +70,9 @@ object TSDImporter {
 
   private def camelCaseize(s: String) = {
     """-([a-z])""".r replaceAllIn(s,  m => m.group(1).toUpperCase)
+  }
+
+  def argumentFeature(argumentName: String) = {
+    argumentName.toLowerCase
   }
 }

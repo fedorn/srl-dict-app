@@ -17,6 +17,7 @@ import org.uimafit.util.JCasUtil
 import org.uimafit.descriptor.ExternalResource
 import org.uimafit.util.JCasUtil.select
 import ru.kfu.itis.issst.uima.depparser.Dependency
+import ru.kfu.itis.cll.uima.commons.DocumentMetadata
 import issst.evex.kb.JsonData
 import issst.evex.kb.TSDImporter
 
@@ -63,11 +64,14 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
       for {headFS <- CasUtil.selectCovered(indicatorBaseType, dependency.getHead())
            arg = casesToArgs.get((headFS.getType.getName, head.get.getLemma, nounCase.get))
            if !arg.isEmpty} {
+        println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
         println(dependency.getHead.getCoveredText)
         println(dependency.getDependent.getCoveredText)
         println(headFS.getType.getName)
         println(arg.get)
         println()
+
+        annotateArgument(cas, headFS, None, dependency.getDependent, arg.get)
       }
       //println(dependency.getHead.getCoveredText)
       //println(dependency.getDependent.getCoveredText)
@@ -87,12 +91,15 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
             for {headFS <- CasUtil.selectCovered(indicatorBaseType, indicatorWord)
                  arg = prepCasesToArgs.get((headFS.getType.getName, indicatorWordform.get.getLemma, prepWordform.get.getLemma, nounCase.get))
                  if !arg.isEmpty} {
+              println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
               println(indicatorWord.getCoveredText)
               println(dependency.getHead.getCoveredText)
               println(dependency.getDependent.getCoveredText)
               println(headFS.getType.getName)
               println(arg.get)
               println()
+
+              annotateArgument(cas, headFS, Option(prepWord), dependency.getDependent, arg.get)
             }
           }
         }
@@ -113,6 +120,19 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
     //println()
       }
     }
+  }
+
+  private def annotateArgument(cas: CAS, indicatorFS: AnnotationFS, prep: Option[Word], argumentWord: Word, argumentType: String) {
+    val argCasType = cas.getTypeSystem().getType(TSDImporter.argumentType(argumentType))
+    val argumentFS = cas.createAnnotation(argCasType, argumentWord.getBegin, argumentWord.getEnd)
+    if (!prep.isEmpty) {
+      val prepFeature = argCasType.getFeatureByBaseName(TSDImporter.prepFeature)
+      argumentFS.setFeatureValue(prepFeature, prep.get)
+    }
+    cas.addFsToIndexes(argumentFS)
+
+    val argFeature = indicatorFS.getType().getFeatureByBaseName(TSDImporter.argumentFeature(argumentType))
+    indicatorFS.setFeatureValue(argFeature, argumentFS)
   }
 
   private def getHead(dependency: Dependency) = {
