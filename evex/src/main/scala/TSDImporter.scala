@@ -42,7 +42,8 @@ object TSDImporter {
     val tsd = new TypeSystemDescription_impl()
 
     tsd.addType(indicatorBaseType, "Base type for event indicators", "uima.tcas.Annotation")
-    tsd.addType(argumentBaseType, "Base type for event arguments", "uima.tcas.Annotation")
+    val argTypeDesc = tsd.addType(argumentBaseType, "Base type for event arguments", "uima.tcas.Annotation")
+    argTypeDesc.addFeature("prep", "Preposition of argument", "org.opencorpora.cas.Word")
 
     tsd
   }
@@ -50,7 +51,7 @@ object TSDImporter {
   private def addEventType(tsd: TypeSystemDescription, eventName: String, argumentNames: List[String]) = {
     val eventTypeDesc = tsd.addType(eventType(eventName), eventName + " event indicator", indicatorBaseType)
     for (argumentName <- argumentNames) {
-      eventTypeDesc.addFeature(argumentName, argumentName + " of event", argumentType(argumentName))
+      eventTypeDesc.addFeature(argumentName.toLowerCase, argumentName + " of event", argumentType(argumentName))
     }
   }
 
@@ -63,7 +64,7 @@ object TSDImporter {
   }
 
   def argumentType(argumentName: String) = {
-    "issst.evex.argument." + argumentName.toLowerCase.capitalize
+    "issst.evex.argument." + argumentName
   }
 
   private def camelCaseize(s: String) = {

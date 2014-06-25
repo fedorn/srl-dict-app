@@ -11,6 +11,8 @@ import ru.ksu.niimm.cll.uima.morph.opencorpora.MorphologyAnnotator
 //import ru.kfu.itis.issst.uima.depparser.mst.GeneratePipelineDescriptorForDepParsing
 import ru.kfu.itis.issst.uima.morph.lemmatizer.DescriptionGenerator
 
+import issst.evex.kb.annotators.IndicatorAnnotator
+
 object EventExtractor {
 
   def main(args: Array[String]) {

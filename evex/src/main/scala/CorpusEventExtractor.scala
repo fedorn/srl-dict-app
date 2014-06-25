@@ -15,6 +15,8 @@ import ru.kfu.itis.cll.uima.cpe.XmiCollectionReader
 import ru.kfu.itis.cll.uima.consumer.XmiWriter
 
 import issst.evex.kb.util.LemmasDepsSerializer
+import issst.evex.kb.annotators.IndicatorAnnotator
+import issst.evex.kb.annotators.ArgumentsAnnotator
 
 object CorpusEventExtractor {
 
@@ -27,11 +29,12 @@ object CorpusEventExtractor {
     val xmiColReaderDesc = CollectionReaderFactory.createDescription(classOf[XmiCollectionReader], CasCreationUtils.mergeTypeSystems(List(TypeSystemDescriptionFactory.createTypeSystemDescription(Paths.get(args(0)).resolve(LemmasDepsSerializer.typeSystemFilename).toUri.toString), TypeSystemDescriptionFactory.createTypeSystemDescription("ru.kfu.itis.cll.uima.commons.Commons-TypeSystem"))), XmiCollectionReader.PARAM_INPUTDIR, args(0))
 
     val jsonDataDesc = createExternalResourceDescription(classOf[JsonData], "http://srl.meteor.com/data.json")
-    val eventExtractorDesc = AnalysisEngineFactory.createPrimitiveDescription(classOf[IndicatorAnnotator], IndicatorAnnotator.JSON_DATA_KEY, jsonDataDesc)
+    val indicatorAnnotatorDesc = AnalysisEngineFactory.createPrimitiveDescription(classOf[IndicatorAnnotator], IndicatorAnnotator.JSON_DATA_KEY, jsonDataDesc)
+    val argumentsAnnotatorDesc = AnalysisEngineFactory.createPrimitiveDescription(classOf[ArgumentsAnnotator], IndicatorAnnotator.JSON_DATA_KEY, jsonDataDesc)
 
     val xmiWriterDesc = AnalysisEngineFactory.createPrimitiveDescription(classOf[XmiWriter], XmiWriter.PARAM_OUTPUTDIR, args(1))
 
-    val aggregateDesc = AnalysisEngineFactory.createAggregateDescription(eventExtractorDesc)
+    val aggregateDesc = AnalysisEngineFactory.createAggregateDescription(indicatorAnnotatorDesc, argumentsAnnotatorDesc)
     //val aggregateDesc = AnalysisEngineFactory.createAggregateDescription(eventExtractorDesc)
 
     SimplePipeline.runPipeline(xmiColReaderDesc, aggregateDesc, xmiWriterDesc)

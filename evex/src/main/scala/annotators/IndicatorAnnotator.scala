@@ -1,4 +1,4 @@
-package issst.evex.kb
+package issst.evex.kb.annotators
 
 import scala.collection.JavaConversions._
 import play.api.libs.json._
@@ -14,6 +14,9 @@ import org.apache.uima.cas.FeatureStructure
 import org.opencorpora.cas.Wordform
 import org.apache.uima.UimaContext
 import ru.kfu.itis.cll.uima.commons.DocumentMetadata
+
+import issst.evex.kb.JsonData
+import issst.evex.kb.TSDImporter
 
 object IndicatorAnnotator {
   final val JSON_DATA_KEY = "JsonDataKey"
@@ -40,9 +43,9 @@ class IndicatorAnnotator extends JCasAnnotator_ImplBase {
         val lemma = wordformFS.asInstanceOf[Wordform].getLemma()
         if (indicatorToEvents.contains(lemma)) {
 
-          println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
-          println(word.getCoveredText)
-          println(indicatorToEvents(lemma))
+          //println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
+          //println(word.getCoveredText)
+          //println(indicatorToEvents(lemma))
 
           for (eventName <- indicatorToEvents(lemma)) {
             val eventTypeName = TSDImporter.eventType(eventName)

@@ -10,6 +10,13 @@
             <name>issst.evex.argument.ArgumentBase</name>
             <description>Base type for event arguments</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>prep</name>
+                    <description>Preposition of argument</description>
+                    <rangeTypeName>org.opencorpora.cas.Word</rangeTypeName>
+                </featureDescription>
+            </features>
         </typeDescription>
         <typeDescription>
             <name>issst.evex.event.TransferOwnership</name>
@@ -17,37 +24,37 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Buyer</name>
+                    <name>buyer</name>
                     <description>Buyer of event</description>
                     <rangeTypeName>issst.evex.argument.Buyer</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Seller</name>
+                    <name>seller</name>
                     <description>Seller of event</description>
                     <rangeTypeName>issst.evex.argument.Seller</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Beneficiary</name>
+                    <name>beneficiary</name>
                     <description>Beneficiary of event</description>
                     <rangeTypeName>issst.evex.argument.Beneficiary</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Artifact</name>
+                    <name>artifact</name>
                     <description>Artifact of event</description>
                     <rangeTypeName>issst.evex.argument.Artifact</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Price</name>
+                    <name>price</name>
                     <description>Price of event</description>
                     <rangeTypeName>issst.evex.argument.Price</rangeTypeName>
                 </featureDescription>
@@ -59,27 +66,27 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Agent</name>
+                    <name>agent</name>
                     <description>Agent of event</description>
                     <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Victim</name>
+                    <name>victim</name>
                     <description>Victim of event</description>
                     <rangeTypeName>issst.evex.argument.Victim</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Instrument</name>
+                    <name>instrument</name>
                     <description>Instrument of event</description>
                     <rangeTypeName>issst.evex.argument.Instrument</rangeTypeName>
                 </featureDescription>
@@ -91,32 +98,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Giver</name>
+                    <name>giver</name>
                     <description>Giver of event</description>
                     <rangeTypeName>issst.evex.argument.Giver</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Recipient</name>
+                    <name>recipient</name>
                     <description>Recipient of event</description>
                     <rangeTypeName>issst.evex.argument.Recipient</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Beneficiary</name>
+                    <name>beneficiary</name>
                     <description>Beneficiary of event</description>
                     <rangeTypeName>issst.evex.argument.Beneficiary</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Money</name>
+                    <name>money</name>
                     <description>Money of event</description>
                     <rangeTypeName>issst.evex.argument.Money</rangeTypeName>
                 </featureDescription>
@@ -128,37 +135,37 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Agent</name>
+                    <name>agent</name>
                     <description>Agent of event</description>
                     <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Artifact</name>
+                    <name>artifact</name>
                     <description>Artifact of event</description>
                     <rangeTypeName>issst.evex.argument.Artifact</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Vehicle</name>
+                    <name>vehicle</name>
                     <description>Vehicle of event</description>
                     <rangeTypeName>issst.evex.argument.Vehicle</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Price</name>
+                    <name>price</name>
                     <description>Price of event</description>
                     <rangeTypeName>issst.evex.argument.Price</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Origin</name>
+                    <name>origin</name>
                     <description>Origin of event</description>
                     <rangeTypeName>issst.evex.argument.Origin</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Destination</name>
+                    <name>destination</name>
                     <description>Destination of event</description>
                     <rangeTypeName>issst.evex.argument.Destination</rangeTypeName>
                 </featureDescription>
@@ -170,17 +177,17 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Org</name>
+                    <name>org</name>
                     <description>Org of event</description>
                     <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
                 </featureDescription>
@@ -192,32 +199,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Defendant</name>
+                    <name>defendant</name>
                     <description>Defendant of event</description>
                     <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Prosecutor</name>
+                    <name>prosecutor</name>
                     <description>Prosecutor of event</description>
                     <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Adjucator</name>
+                    <name>adjucator</name>
                     <description>Adjucator of event</description>
                     <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Crime</name>
+                    <name>crime</name>
                     <description>Crime of event</description>
                     <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
                 </featureDescription>
@@ -229,32 +236,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Defendant</name>
+                    <name>defendant</name>
                     <description>Defendant of event</description>
                     <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Prosecutor</name>
+                    <name>prosecutor</name>
                     <description>Prosecutor of event</description>
                     <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Adjucator</name>
+                    <name>adjucator</name>
                     <description>Adjucator of event</description>
                     <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Crime</name>
+                    <name>crime</name>
                     <description>Crime of event</description>
                     <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
                 </featureDescription>
@@ -266,17 +273,17 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Org</name>
+                    <name>org</name>
                     <description>Org of event</description>
                     <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
                 </featureDescription>
@@ -288,32 +295,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Money</name>
+                    <name>money</name>
                     <description>Money of event</description>
                     <rangeTypeName>issst.evex.argument.Money</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Adjucator</name>
+                    <name>adjucator</name>
                     <description>Adjucator of event</description>
                     <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Crime</name>
+                    <name>crime</name>
                     <description>Crime of event</description>
                     <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
                 </featureDescription>
@@ -325,32 +332,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Defendant</name>
+                    <name>defendant</name>
                     <description>Defendant of event</description>
                     <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Prosecutor</name>
+                    <name>prosecutor</name>
                     <description>Prosecutor of event</description>
                     <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Adjucator</name>
+                    <name>adjucator</name>
                     <description>Adjucator of event</description>
                     <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Crime</name>
+                    <name>crime</name>
                     <description>Crime of event</description>
                     <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
                 </featureDescription>
@@ -362,17 +369,17 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Org</name>
+                    <name>org</name>
                     <description>Org of event</description>
                     <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
                 </featureDescription>
@@ -384,32 +391,32 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Person</name>
+                    <name>person</name>
                     <description>Person of event</description>
                     <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Agent</name>
+                    <name>agent</name>
                     <description>Agent of event</description>
                     <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Position</name>
+                    <name>position</name>
                     <description>Position of event</description>
                     <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
                 </featureDescription>
@@ -421,27 +428,27 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Person</name>
+                    <name>person</name>
                     <description>Person of event</description>
                     <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Killer</name>
+                    <name>killer</name>
                     <description>Killer of event</description>
                     <rangeTypeName>issst.evex.argument.Killer</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Instrument</name>
+                    <name>instrument</name>
                     <description>Instrument of event</description>
                     <rangeTypeName>issst.evex.argument.Instrument</rangeTypeName>
                 </featureDescription>
@@ -453,27 +460,27 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Person</name>
+                    <name>person</name>
                     <description>Person of event</description>
                     <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Position</name>
+                    <name>position</name>
                     <description>Position of event</description>
                     <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
                 </featureDescription>
@@ -485,17 +492,17 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
@@ -507,22 +514,22 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Agent</name>
+                    <name>agent</name>
                     <description>Agent of event</description>
                     <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Org</name>
+                    <name>org</name>
                     <description>Org of event</description>
                     <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
                 </featureDescription>
@@ -534,27 +541,27 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Person</name>
+                    <name>person</name>
                     <description>Person of event</description>
                     <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Position</name>
+                    <name>position</name>
                     <description>Position of event</description>
                     <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
                 </featureDescription>
@@ -566,27 +573,27 @@
             <supertypeName>issst.evex.event.EventBase</supertypeName>
             <features>
                 <featureDescription>
-                    <name>Time</name>
+                    <name>time</name>
                     <description>Time of event</description>
                     <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Place</name>
+                    <name>place</name>
                     <description>Place of event</description>
                     <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Person</name>
+                    <name>person</name>
                     <description>Person of event</description>
                     <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Entity</name>
+                    <name>entity</name>
                     <description>Entity of event</description>
                     <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>Position</name>
+                    <name>position</name>
                     <description>Position of event</description>
                     <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
                 </featureDescription>
