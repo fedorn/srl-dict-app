@@ -26,37 +26,51 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>buyer</name>
                     <description>Buyer of event</description>
-                    <rangeTypeName>issst.evex.argument.Buyer</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Buyer</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>seller</name>
                     <description>Seller of event</description>
-                    <rangeTypeName>issst.evex.argument.Seller</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Seller</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>beneficiary</name>
                     <description>Beneficiary of event</description>
-                    <rangeTypeName>issst.evex.argument.Beneficiary</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Beneficiary</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>artifact</name>
                     <description>Artifact of event</description>
-                    <rangeTypeName>issst.evex.argument.Artifact</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Artifact</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>price</name>
                     <description>Price of event</description>
-                    <rangeTypeName>issst.evex.argument.Price</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Price</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -68,27 +82,37 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>agent</name>
                     <description>Agent of event</description>
-                    <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Agent</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>victim</name>
                     <description>Victim of event</description>
-                    <rangeTypeName>issst.evex.argument.Victim</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Victim</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>instrument</name>
                     <description>Instrument of event</description>
-                    <rangeTypeName>issst.evex.argument.Instrument</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Instrument</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -100,32 +124,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>giver</name>
                     <description>Giver of event</description>
-                    <rangeTypeName>issst.evex.argument.Giver</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Giver</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>recipient</name>
                     <description>Recipient of event</description>
-                    <rangeTypeName>issst.evex.argument.Recipient</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Recipient</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>beneficiary</name>
                     <description>Beneficiary of event</description>
-                    <rangeTypeName>issst.evex.argument.Beneficiary</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Beneficiary</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>money</name>
                     <description>Money of event</description>
-                    <rangeTypeName>issst.evex.argument.Money</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Money</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -137,37 +173,51 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>agent</name>
                     <description>Agent of event</description>
-                    <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Agent</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>artifact</name>
                     <description>Artifact of event</description>
-                    <rangeTypeName>issst.evex.argument.Artifact</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Artifact</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>vehicle</name>
                     <description>Vehicle of event</description>
-                    <rangeTypeName>issst.evex.argument.Vehicle</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Vehicle</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>price</name>
                     <description>Price of event</description>
-                    <rangeTypeName>issst.evex.argument.Price</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Price</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>origin</name>
                     <description>Origin of event</description>
-                    <rangeTypeName>issst.evex.argument.Origin</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Origin</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>destination</name>
                     <description>Destination of event</description>
-                    <rangeTypeName>issst.evex.argument.Destination</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Destination</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -179,17 +229,23 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>org</name>
                     <description>Org of event</description>
-                    <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Org</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -201,32 +257,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>defendant</name>
                     <description>Defendant of event</description>
-                    <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Defendant</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>prosecutor</name>
                     <description>Prosecutor of event</description>
-                    <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Prosecutor</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>adjucator</name>
                     <description>Adjucator of event</description>
-                    <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Adjucator</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>crime</name>
                     <description>Crime of event</description>
-                    <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Crime</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -238,32 +306,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>defendant</name>
                     <description>Defendant of event</description>
-                    <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Defendant</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>prosecutor</name>
                     <description>Prosecutor of event</description>
-                    <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Prosecutor</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>adjucator</name>
                     <description>Adjucator of event</description>
-                    <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Adjucator</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>crime</name>
                     <description>Crime of event</description>
-                    <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Crime</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -275,17 +355,23 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>org</name>
                     <description>Org of event</description>
-                    <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Org</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -297,32 +383,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>money</name>
                     <description>Money of event</description>
-                    <rangeTypeName>issst.evex.argument.Money</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Money</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>adjucator</name>
                     <description>Adjucator of event</description>
-                    <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Adjucator</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>crime</name>
                     <description>Crime of event</description>
-                    <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Crime</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -334,32 +432,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>defendant</name>
                     <description>Defendant of event</description>
-                    <rangeTypeName>issst.evex.argument.Defendant</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Defendant</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>prosecutor</name>
                     <description>Prosecutor of event</description>
-                    <rangeTypeName>issst.evex.argument.Prosecutor</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Prosecutor</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>adjucator</name>
                     <description>Adjucator of event</description>
-                    <rangeTypeName>issst.evex.argument.Adjucator</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Adjucator</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>crime</name>
                     <description>Crime of event</description>
-                    <rangeTypeName>issst.evex.argument.Crime</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Crime</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -371,17 +481,23 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>org</name>
                     <description>Org of event</description>
-                    <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Org</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -393,32 +509,44 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>person</name>
                     <description>Person of event</description>
-                    <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Person</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>agent</name>
                     <description>Agent of event</description>
-                    <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Agent</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>position</name>
                     <description>Position of event</description>
-                    <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Position</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -430,27 +558,37 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>person</name>
                     <description>Person of event</description>
-                    <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Person</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>killer</name>
                     <description>Killer of event</description>
-                    <rangeTypeName>issst.evex.argument.Killer</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Killer</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>instrument</name>
                     <description>Instrument of event</description>
-                    <rangeTypeName>issst.evex.argument.Instrument</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Instrument</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -462,27 +600,37 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>person</name>
                     <description>Person of event</description>
-                    <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Person</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>position</name>
                     <description>Position of event</description>
-                    <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Position</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -494,17 +642,23 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -516,22 +670,30 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>agent</name>
                     <description>Agent of event</description>
-                    <rangeTypeName>issst.evex.argument.Agent</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Agent</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>org</name>
                     <description>Org of event</description>
-                    <rangeTypeName>issst.evex.argument.Org</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Org</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -543,27 +705,37 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>person</name>
                     <description>Person of event</description>
-                    <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Person</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>position</name>
                     <description>Position of event</description>
-                    <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Position</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -575,27 +747,37 @@
                 <featureDescription>
                     <name>time</name>
                     <description>Time of event</description>
-                    <rangeTypeName>issst.evex.argument.Time</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Time</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>place</name>
                     <description>Place of event</description>
-                    <rangeTypeName>issst.evex.argument.Place</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Place</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>person</name>
                     <description>Person of event</description>
-                    <rangeTypeName>issst.evex.argument.Person</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Person</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>entity</name>
                     <description>Entity of event</description>
-                    <rangeTypeName>issst.evex.argument.Entity</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Entity</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
                 <featureDescription>
                     <name>position</name>
                     <description>Position of event</description>
-                    <rangeTypeName>issst.evex.argument.Position</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>issst.evex.argument.Position</elementType>
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
                 </featureDescription>
             </features>
         </typeDescription>

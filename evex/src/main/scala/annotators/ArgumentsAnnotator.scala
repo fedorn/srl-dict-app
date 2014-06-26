@@ -12,6 +12,7 @@ import org.apache.uima.cas.FeatureStructure
 import org.opencorpora.cas.Wordform
 import org.apache.uima.UimaContext
 import org.apache.uima.cas.CAS
+import org.apache.uima.jcas.cas.FSArray
 import org.uimafit.util.CasUtil
 import org.uimafit.util.JCasUtil
 import org.uimafit.descriptor.ExternalResource
@@ -132,7 +133,15 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
     cas.addFsToIndexes(argumentFS)
 
     val argFeature = indicatorFS.getType().getFeatureByBaseName(TSDImporter.argumentFeature(argumentType))
-    indicatorFS.setFeatureValue(argFeature, argumentFS)
+    val oldArgArray = indicatorFS.getFeatureValue(argFeature).asInstanceOf[FSArray]
+    val argFSArray = oldArgArray match {
+      case null => new FSArray(cas.getJCas, 1)
+      case _ => new FSArray(cas.getJCas(), oldArgArray.size() + 1)
+    }
+    for (i <- 0 until argFSArray.size() - 1)
+      argFSArray.set(i, oldArgArray.get(i))
+    argFSArray.set(argFSArray.size() - 1, argumentFS)
+    indicatorFS.setFeatureValue(argFeature, argFSArray)
   }
 
   private def getHead(dependency: Dependency) = {

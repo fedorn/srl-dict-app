@@ -52,7 +52,7 @@ object TSDImporter {
   private def addEventType(tsd: TypeSystemDescription, eventName: String, argumentNames: List[String]) = {
     val eventTypeDesc = tsd.addType(eventType(eventName), eventName + " event indicator", indicatorBaseType)
     for (argumentName <- argumentNames) {
-      eventTypeDesc.addFeature(argumentFeature(argumentName), argumentName + " of event", argumentType(argumentName))
+      eventTypeDesc.addFeature(argumentFeature(argumentName), argumentName + " of event", "uima.cas.FSArray", argumentType(argumentName), false)
     }
   }
 
