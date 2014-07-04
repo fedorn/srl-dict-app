@@ -21,3 +21,5 @@ libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-dep-parser-mst" % "0.
 libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-lemmatizer-opencorpora" % "0.3-SNAPSHOT"
 
 libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-commons" % "0.3-SNAPSHOT"
+
+libraryDependencies += "ru.ksu.niimm.cll.uima" % "uima-ext-brat-integration" % "0.3-SNAPSHOT"

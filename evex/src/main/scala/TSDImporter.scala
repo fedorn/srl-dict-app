@@ -32,7 +32,7 @@ object TSDImporter {
     fileWriter.close()
   }
 
-  private def getTypes(urlString: String) = {
+  def getTypes(urlString: String) = {
     val typesUrl = url(urlString)
     val jsonString = Http(typesUrl OK as.String)
     val json: JsValue = Json.parse(jsonString())
