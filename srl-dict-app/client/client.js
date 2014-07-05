@@ -81,6 +81,19 @@ Template.types.events({
   }
 })
 
+Template.processing.events({
+  'click #run_btn': function() {
+    Session.set("processingRunning", true);
+    Meteor.call("callProcessing", function(error, result) {
+      Session.set("processingRunning", false);
+    });
+  }
+})
+
+Template.processing.isProcessing = function() {
+  return Session.get("processingRunning")
+}
+
 Template.verbs.events(okCancelEvents(
   '#new-verb',
   {
