@@ -56,7 +56,7 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
     for {dependency: Dependency <- select(jCas, classOf[Dependency])
          dependent = getDependent(dependency)
          head = getHead(dependency)
-         if !head.isEmpty && !dependent.isEmpty && isNoun(dependent.get)
+         if !head.isEmpty && !dependent.isEmpty
          nounCase = getCase(dependent.get)
          if !nounCase.isEmpty} {
       // For deps without preps
@@ -135,10 +135,6 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
     Option(word) map {
       _.getWordforms.toArray.head.asInstanceOf[Wordform]
     }
-  }
-
-  private def isNoun(wordform: Wordform) = {
-    wordform.getGrammems != null && wordform.getGrammems().toArray().toSet.contains("NOUN")
   }
 
   private def isPrep(wordform: Wordform) = {
