@@ -49,8 +49,6 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
         casesToArgs += ((TSDImporter.eventType(eventType), indicator, argumentMap.get("noun_case").get) -> argumentMap.get("type_arg").get)
       }
     }
-    //println(casesToArgs)
-    //println(prepCasesToArgs)
   }
 
   override def process(cas: CAS) {
@@ -65,19 +63,15 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
       for {headFS <- CasUtil.selectCovered(indicatorBaseType, dependency.getHead())
            arg = casesToArgs.get((headFS.getType.getName, head.get.getLemma, nounCase.get))
            if !arg.isEmpty} {
-        println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
-        println(dependency.getHead.getCoveredText)
-        println(dependency.getDependent.getCoveredText)
-        println(headFS.getType.getName)
-        println(arg.get)
-        println()
+        //println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
+        //println(dependency.getHead.getCoveredText)
+        //println(dependency.getDependent.getCoveredText)
+        //println(headFS.getType.getName)
+        //println(arg.get)
+        //println()
 
         annotateArgument(cas, headFS, None, dependency.getDependent, arg.get)
       }
-      //println(dependency.getHead.getCoveredText)
-      //println(dependency.getDependent.getCoveredText)
-      //println(headFS.getType.getName)
-      //println()
       val prepWord = dependency.getHead
       val prepWordform = getWordform(prepWord)
       if (!prepWordform.isEmpty && isPrep(prepWordform.get)) {
@@ -92,33 +86,18 @@ class ArgumentsAnnotator extends CasAnnotator_ImplBase {
             for {headFS <- CasUtil.selectCovered(indicatorBaseType, indicatorWord)
                  arg = prepCasesToArgs.get((headFS.getType.getName, indicatorWordform.get.getLemma, prepWordform.get.getLemma, nounCase.get))
                  if !arg.isEmpty} {
-              println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
-              println(indicatorWord.getCoveredText)
-              println(dependency.getHead.getCoveredText)
-              println(dependency.getDependent.getCoveredText)
-              println(headFS.getType.getName)
-              println(arg.get)
-              println()
+              //println(select(jCas, classOf[DocumentMetadata]).head.getSourceUri())
+              //println(indicatorWord.getCoveredText)
+              //println(dependency.getHead.getCoveredText)
+              //println(dependency.getDependent.getCoveredText)
+              //println(headFS.getType.getName)
+              //println(arg.get)
+              //println()
 
               annotateArgument(cas, headFS, Option(prepWord), dependency.getDependent, arg.get)
             }
           }
         }
-
-        //for {headFS <- CasUtil.selectCovered(indicatorBaseType, prepWord)} {
-           //println((headFS.getType.getName, head.get.getLemma, prepWord.getCoveredText, nounCase.get))
-             //val arg = prepCasesToArgs.get((headFS.getType.getName, head.get.getLemma, prepWord.getCoveredText, nounCase.get))
-             ////if !arg.isEmpty} {
-          ////println(dependency.getHead.getCoveredText)
-          ////println(dependency.getDependent.getCoveredText)
-          ////println(headFS.getType.getName)
-          ////println(arg.get)
-          ////println()
-        //}
-    //println(dependency.getHead.getCoveredText)
-    //println(dependency.getDependent.getCoveredText)
-    //println(headFS.getType.getName)
-    //println()
       }
     }
   }
