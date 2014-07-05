@@ -31,7 +31,7 @@ trait ProcessingService extends HttpService {
         respondWithStatus(200) {
           complete {
             B2UCpeLauncher.launchCpe(inputDir, outputDir)
-            "ok"
+            "Processing done!"
           }
         }
       }
