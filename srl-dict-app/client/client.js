@@ -84,7 +84,14 @@ Template.types.events({
 Template.processing.events({
   'click #run_btn': function() {
     Session.set("processingRunning", true);
+    Session.set("processingDone", false);
+    Session.set("processingError", false);
     Meteor.call("callProcessing", function(error, result) {
+      if (!error) {
+        Session.set("processingDone", true);
+      } else {
+        Session.set("processingError", true);
+      }
       Session.set("processingRunning", false);
     });
   }
@@ -92,6 +99,14 @@ Template.processing.events({
 
 Template.processing.isProcessing = function() {
   return Session.get("processingRunning")
+}
+
+Template.processing.processingDone = function() {
+  return Session.get("processingDone")
+}
+
+Template.processing.processingError = function() {
+  return Session.get("processingError")
 }
 
 Template.verbs.events(okCancelEvents(

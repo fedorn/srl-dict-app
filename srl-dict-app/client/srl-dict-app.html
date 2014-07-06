@@ -46,9 +46,17 @@
     </ul>
   {{else}}
     <ul class="nav pull-right">
-      <form class="navbar-form">
-        <button type="submit" class="btn" id="run_btn">Analyse documents</button>
-      </form>
+      <div class="navbar-form">
+        <div style="display: inline-block; vertical-align: middle; height: 15px;">
+          {{#if processingDone}}
+            Analysis is done. <a href="http://ec2-54-90-210-41.compute-1.amazonaws.com/~ubuntu/" target="_blank">View results</a>
+          {{/if}}
+          {{#if processingError}}
+            Error!
+          {{/if}}
+        </div>
+        <button type="submit" class="btn" id="run_btn" style="display: inline-block;">Analyse documents</button>
+      </div>
     </ul>
   {{/if}}
 </template>
